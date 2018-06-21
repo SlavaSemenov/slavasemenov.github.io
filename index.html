@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microstore</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Alex Semenov, Sergey Sidorov">
+    <meta name="description" content="Продажа наушников Microstore">
+    <meta name="keywords" content="Микронаушники, микронаушники москва, микронаушники доставка, микронаушник, микронаушник москва, микронаушник доставка">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Styles//animate.css">
+    <link rel="stylesheet" type="text/css" href="Styles/Common.css">
+    <link rel="stylesheet" type="text/css" href="Styles/Responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1.62/?lang=ru_RU&load=package.full,Map,Placemark,route,templateLayoutFactory,layout.Image,layout.ImageWithContent&mode=debug"
+        type="text/javascript"></script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="51">
+    <div id="side-bar" class="collapsed">
+        <div class="social-item" id="call">
+            <ul class="number-list collapsed" id="call_dropdown">
+                <li>
+                    <a href="tel:+79671895850" title="Позвонить">+7 (967) 189-58-50</a>
+                </li>
+                <li>
+                    <a href="tel:+79778871903" title="Позвонить">+7 (977) 887-19-03</a>
+                </li>
+                <li>
+                    <a href="tel:+79197699321" title="Позвонить">+7 (967) 769-93-21</a>
+                </li>
+            </ul>
+            <a class="text-center">
+                <img src="Content/Images/Icons/call_stroke.svg">
+            </a>
+        </div>
+        <div class="social-item mobile">
+            <a class="text-center" title="Чат в Viber" href="viber://chat?number=79671895850" target="_blank">
+                <img src="Content/Images/Icons/viber_black_stroke.svg">
+            </a>
+        </div>
+        <div class="social-item desktop">
+            <a class="text-center" href="https://web.telegram.org/#/im?p=@SergeyI5" title="Чат в Telegram">
+                <img src="Content/Images/Icons/telegram_black_stroke.svg">
+            </a>
+        </div>
+        <div class="social-item mobile">
+            <a class="text-center" href="tg://resolve?domain=<USERNAME>" title="Чат в Telegram">
+                <img src="Content/Images/Icons/telegram_black_stroke.svg">
+            </a>
+        </div>
+        <div class="social-item">
+            <a class="text-center" title="Чат в WhatsApp" href="https://api.whatsapp.com/send?phone=79671895850" target="_blank">
+                <img src="Content/Images/Icons/whatsapp_black_stroke.svg">
+            </a>
+        </div>
+    </div>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <button type="button" id="menu_button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a type="button" class="menu-tel" href="tel:+79671895850">
+                        <img src="Content/Images/Icons/call_stroke_white.svg" alt="" height="25">
+                    </a>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <span>Microstore</span>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-xs-12 text-center head-titles">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-center">
+                            <li>
+                                <a class="page-scroll active" href="#about">О нас</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#catalog">Каталог</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#contact">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3 col-xs-12 head-number">
+                    <a href="tel:+79671895850">
+                        <span>+7 (967) 189-58-50</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <div class="row wow fadeInDown">
+                <h1>Надоело учить непонятный материал?</h1>
+                <h1>Сдавайте экзамены на "отлично"!</h1>
+                <h1>
+                    <small>Доставка микронаушников по Москве от 150 руб.</small>
+                </h1>
+                <a class="page-scroll button" href="#catalog">
+                    <span>Перейти в каталог</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section id="about" class="container">
+        <div class="">
+            <div class="row">
+                <h1 class="wow fadeInDown">О НАС</h1>
+                <p class="margin-top40">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                    lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
+            </div>
+            <div class="row wow fadeInDown">
+                <div class="col-sm-4 col-xs-12 text-center">
+                    <img src="Content/Images/Icons/Garantee.png" class="img-icon">
+                    <p>Гарантируем 3 месяца работы товаров</p>
+                </div>
+                <div class="col-sm-4 col-xs-12 text-center">
+                    <img src="Content/Images/Icons/Book.png" class="img-icon">
+                    <p>Обучим использованию и поможем настроить</p>
+                </div>
+                <div class="col-sm-4 col-xs-12 text-center">
+                    <img src="Content/Images/Icons/Track.png" class="img-icon">
+                    <p>Доставим до станции метро и МЦК</p>
+                </div>
+            </div>
+            <div align="center" class="row wow fadeInDown">
+                <div class="col-sm-4 col-xs-12 col-sm-offset-2 text-center">
+                    <img src="Content/Images/Icons/devices.png" class="img-icon">
+                    <p>Наши микронаушники работают со всеми моделями смартфонов</p>
+                </div>
+                <div class="col-sm-4 col-xs-12 text-center">
+                    <img src="Content/Images/Icons/battery.png" class="img-icon">
+                    <p>Бесплатная батарейка в подарок каждому покупателю!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="catalog" class="container">
+    </section>
+    <section id="contact" class="container">
+        <div class="container">
+            <div class="row">
+                <h1 class="wow fadeInDown">
+                    <span class="gray">СВЯЖИТЕСЬ</span> С НАМИ</h1>
+            </div>
+        </div>
+        <div class="container map-container">
+            <div class="row row-map">
+                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 map-info">
+                    <div class="content">
+                        <div class="container-fluid">
+                            <div class="row wow fadeInDown">
+                                <div class="icon">
+                                    <img src="Content/Images/Icons/pin.svg" alt="">
+                                </div>
+                                <span>Москва, проспект 60-летия Октября, 13</span>
+                            </div>
+                            <div class="row wow fadeInDown">
+                                <div class="icon">
+                                    <img src="Content/Images/Icons/clock.svg" alt="">
+                                </div>
+                                <span>7:00 - 0:00 без выходных</span>
+                            </div>
+                            <div class="row wow fadeInDown">
+                                <div class="icon">
+                                    <img src="Content/Images/Icons/call.svg" alt="">
+                                </div>
+                                <a href="tel:+79671895850">+7 (967) 189-58-50</a>
+                            </div>
+                            <div class="row wow fadeInDown">
+                                <div class="icon">
+                                    <img src="Content/Images/Icons/call.svg" alt="">
+                                </div>
+                                <a href="tel:+79778871903">+7 (977) 887-19-03</a>
+                            </div>
+                            <div class="row wow fadeInDown">
+                                <div class="icon">
+                                    <img src="Content/Images/Icons/call.svg" alt="">
+                                </div>
+                                <a href="tel:+79197699321">+7 (919) 769-93-21</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="map" class="col-xs-12"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row text-center">
+                <ul class="social-list">
+                    <li>
+                        <a href="https://vk.com/microstore.site" target="_blank">
+                            <img src="Content/Images/Icons/vk_round_white.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <img src="Content/Images/Icons/youtube_round_white.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/MicroStore-1718512438267514/" target="_blank">
+                            <img src="Content/Images/Icons/facebook_round_white.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://instagram.com/microStore.site" target="_blank">
+                            <img src="Content/Images/Icons/instagram_round_white.svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row text-center">
+                <p class="copyright">All rights reserved © Copyright 2018 MicroStore</p>
+                <p>Вся представленная на сайте информация, касающаяся товаров, описания, стоимости продукции, проводимых акциях,
+                    носит информационный характер и не является публичной офертой, определяемой положениями п. 2 ст. 437
+                    ГК РФ. Для получения подробной информации просьба обращаться в "MicroStore". Опубликованная на данном
+                    сайте информация может быть изменена в любое время без предварительного уведомления.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/babel">
+        var GOODS = [
+    {
+        id: 1,
+        name: 'Микронаушник М-1',
+        image: 'Content/Images/Goods/m-1.jpg',
+        price: '1290',
+        rent: '400',
+        info: 'Магнитный, проводной микронаушник. Работает от батарейки KRONA – 4 часа. Оборудован гарнитурой с микрофоном и кнопкой приёма/сброса вызова.'
+    },
+    {
+        id: 2,
+        name: 'Микронаушник М-2',
+        image: 'Content/Images/Goods/m-2.jpg',
+        price: '1890',
+        rent: '600',
+        info: 'Магнитный проводной микронаушник с выводным микрофоном повышенной чувствительности, кнопкой-пищалкой, кнопкой сброса/приема вызова и кристальным звуком.'
+    },
+    {
+        id: 3,
+        name: 'Микронаушник М-3',
+        image: 'Content/Images/Goods/m-3.jpg',
+        price: '2890',
+        rent: '800',
+        info: 'Магнитный Bluetooth микронаушник. Работает со всеми телефонами с функцией Bluetooth от одного заряда 4 часа.'
+    },
+    {
+        id: 4,
+        name: 'Микронаушник М-4',
+        image: 'Content/Images/Goods/m-4.jpg',
+        price: '3390',
+        rent: '900',
+        info: 'Магнитный Bluetooth микронаушник с выводным микрофоном повышенной чувствительности, кнопкой-пищалкой, кнопкой сброса/приема вызова и кристальным звуком. Беспроводная модель, работает со всеми телефонами с функцией Bluetooth от одного заряда - 4 часа.'
+    },
+    {
+        id: 5,
+        name: 'Микронаушник К-1',
+        image: 'Content/Images/Goods/k-1.jpg',
+        price: '1990',
+        rent: '600',
+        info: 'Kапсульный, проводной микронаушник. Крепкие провода обеспечивают надёжность соединения, а тонкая петля позволяет скрыть её под одеждой.'
+    },
+    {
+        id: 6,
+        name: 'Микронаушник К-2',
+        image: 'Content/Images/Goods/k-2.jpg',
+        price: '2590',
+        rent: '700',
+        info: 'Капсульный проводной микронаушник с выводным микрофоном повышенной чувствительности, кнопкой-пищалкой, кнопкой сброса/приема вызова и кристальным звуком.'
+    },
+    {
+        id: 7,
+        name: 'Микронаушник К-3',
+        image: 'Content/Images/Goods/k-3.jpg',
+        price: '2990',
+        rent: '800',
+        info: 'Капсульный Bluetooth микронаушник. Работает со всеми телефонами с функцией Bluetooth от одного заряда 4 часа. В наличии черные и белые модели.'
+    },
+    {
+        id: 8,
+        name: 'Микронаушник К-4',
+        image: 'Content/Images/Goods/k-4.jpg',
+        price: '3490',
+        rent: '1000',
+        info: 'Капсульный Bluetooth микронаушник с выводным микрофоном повышенной чувствительности, кнопкой-пищалкой, кнопкой сброса/приема вызова и кристальным звуком. Беспроводная модель, работает со всеми телефонами с функцией Bluetooth от одного заряда - 4 часа.'
+    },
+    {
+        id: 9,
+        name: 'Капсула',
+        image: 'Content/Images/Goods/capsule.jpg',
+        price: '1500',
+        rent: '200',
+        info: 'Микродинамик направленного звучания для капсульного микронаушника. Время работы от одной батарейки 4 часа.'
+    },
+    {
+        id: 10,
+        name: 'Гарнитура',
+        image: 'Content/Images/Goods/garnitura.jpg',
+        price: '300',
+        rent: null,
+        info: 'Гарнитура с микрофоном и кнопкой приёма/сброса вызова. Совместима с android и apple-устройствами.'
+    },
+    {
+        id: 11,
+        name: 'Комплект',
+        image: 'Content/Images/Goods/4magnets.jpg',
+        price: '250',
+        rent: null,
+        info: 'Комплект запасных частей для магнитного микронаушника: 4 магнита: 2 маленьких: 1*3 мм и 2 больших: 2*3 мм; Инжектор; Извлекатель'
+    },
+    {
+        id: 12,
+        name: 'Батарейка SONY',
+        image: 'Content/Images/Goods/battery_sony.jpg',
+        price: '90',
+        rent: null,
+        info: 'Батарейка SONY 337 для капсульного микронаушника. Время работы – 3-4 часа непрерывного подключения.'
+    },
+    {
+        id: 13,
+        name: 'Батарейка KRONA',
+        image: 'Content/Images/Goods/battery_krona.jpg',
+        price: '90',
+        rent: null,
+        info: 'Щелочная батарейка типа KRONA для проводного магнитного микронаушника. Время работы – 3-4 часа непрерывного подключения.'
+    }
+];
+
+var Price = React.createClass({
+    render: function () {
+        if (this.props.rent != null) {
+            return (
+                <div className="product-price">
+                    <h3 className="product-title">{this.props.name}</h3>
+                    <div className="container-price">
+                        <div className="row">
+                            <div className="col-rest">
+                                <p><small>Покупка <strong>{this.props.price}</strong> руб</small></p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-rest">
+                                <p><small>Аренда <strong>{this.props.rent}</strong> руб/сутки</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        else if(this.props.rent == null){
+            return (
+                <div className="product-price">
+                    <h3 className="product-title">{this.props.name}</h3>
+                    <div className="container-price">
+                        <div className="row">
+                            <div className="col-rest">
+                                <p><small>Покупка <strong>1500</strong> руб</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+    }
+});
+
+var Item = React.createClass({
+    render: function () {
+            return (
+                <div className="col-md-4 col-sm-6 col-xs-12 product wow fadeIn">
+                    <div className="product-boards">
+                        <img src={this.props.image} className="product-img" alt="" />
+                        <div className="product-info">
+                            <h3 className="product-title">{this.props.name}</h3>
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <h4 className="product-information">{this.props.info}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <Price 
+                        name={this.props.name}
+                        price = {this.props.price}
+                        rent = {this.props.rent}
+                    />
+                </div>
+            );
+    }
+});
+
+var GoodsList = React.createClass({
+    render: function(){
+        return (
+            <div className="">
+                <div className="row">
+                    <h1 className="wow fadeInDown"><span className="gray">НАШ</span> КАТАЛОГ</h1>
+                    <p className="margin-top40 wow fadeInDown">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                </div>
+                <div className="row goods">
+                    {
+                        GOODS.map(function(el) {
+                            return <Item
+                                key={el.id}
+                                name={el.name}
+                                image={el.image}
+                                price={el.price}
+                                rent={el.rent}
+                                info={el.info}
+                            />;
+                        })
+                    }
+                </div>
+            </div>
+        );
+    }
+});
+
+ReactDOM.render(
+    <GoodsList />,
+    document.getElementById("catalog")
+);
+    </script>
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.easing.min.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/wow.min.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+
+</html>
