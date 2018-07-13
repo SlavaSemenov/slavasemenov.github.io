@@ -151,11 +151,24 @@ p{
 }
 
 .button {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     display: block;
     float: left;
     background: transparent;
     border: 1px solid #ffffff;
     padding: 5px 30px;
+}
+
+.go-button:hover{
+    background: #ffffff;
+    color: #000000;
+}
+
+.go-button:hover span{
+    color: #000000;
 }
 
 .button span{
