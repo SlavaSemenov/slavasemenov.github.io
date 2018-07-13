@@ -310,9 +310,15 @@ section h1{
     font-size: 22px;
 }
 
-.product:hover .product-price{
+.product.active .product-price{
     /* opacity: 0; */
     color: white;
+}
+
+@media (min-width: 768px){
+    .product:hover .product-price{
+        color: white;
+    }
 }
 
 .container-price{
@@ -342,8 +348,14 @@ section h1{
     -o-transition: 0.3s;
     transition: 0.3s;
 }
-.product:hover .product-info{
+.product.active .product-info{
     opacity: 1;
+}
+
+@media (min-width: 768px){
+    .product:hover .product-info{
+        opacity: 1;
+    }
 }
 
 .product-information{
@@ -649,10 +661,17 @@ section h3{
 .icon{
     float: left;
     padding: 0 10px;
+    min-width: 45px;
+    min-height: 1px;
 }
 
 .icon img{
     width: 25px;
+}
+
+.sklad{
+    width: 120px;
+    display: inline-block;
 }
 
 footer{
