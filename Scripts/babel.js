@@ -126,12 +126,15 @@ var Price = React.createClass({
                 </div>
             );
         }
-        else if (this.props.rent == null) {
+        else if(this.props.rent == null){
             return (
-                <div className="container-price">
-                    <div className="row">
-                        <div className="col-rest">
-                            <p><small>Покупка <strong>1500</strong> руб</small></p>
+                <div className="product-price">
+                    <h3 className="product-title">{this.props.name}</h3>
+                    <div className="container-price">
+                        <div className="row">
+                            <div className="col-rest">
+                                <p><small>Покупка <strong>{this.props.price}</strong> руб</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,40 +145,40 @@ var Price = React.createClass({
 
 var Item = React.createClass({
     render: function () {
-        return (
-            <div className="col-md-4 col-sm-6 col-xs-12 product wow fadeIn">
-                <div className="product-boards">
-                    <img src={this.props.image} className="product-img" alt="" />
-                    <div className="product-info">
-                        <h3 className="product-title">{this.props.name}</h3>
-                        <div className="container-fluid">
-                            <div className="row">
-                                <h4 className="product-information">{this.props.info}</h4>
+            return (
+                <div className="col-md-4 col-sm-6 col-xs-12 product wow fadeIn">
+                    <div className="product-boards">
+                        <img src={this.props.image} className="product-img" alt="" />
+                        <div className="product-info">
+                            <h3 className="product-title">{this.props.name}</h3>
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <h4 className="product-information">{this.props.info}</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <Price 
+                        name={this.props.name}
+                        price = {this.props.price}
+                        rent = {this.props.rent}
+                    />
                 </div>
-                <Price
-                    name={this.props.name}
-                    price={this.props.price}
-                    rent={this.props.rent}
-                />
-            </div>
-        );
+            );
     }
 });
 
 var GoodsList = React.createClass({
-    render: function () {
+    render: function(){
         return (
             <div className="">
                 <div className="row">
-                    <h1 className="wow fadeInDown"><span className="gray">НАШ</span> КАТАЛОГ</h1>
-                    <p className="margin-top40 wow fadeInDown">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                    <h1 className="wow fadeIn"><span className="gray">НАШ</span> КАТАЛОГ</h1>
+                    <p className="margin-top40 wow fadeIn">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
                 </div>
                 <div className="row goods">
                     {
-                        GOODS.map(function (el) {
+                        GOODS.map(function(el) {
                             return <Item
                                 key={el.id}
                                 name={el.name}
