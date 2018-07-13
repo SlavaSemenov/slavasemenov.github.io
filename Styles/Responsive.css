@@ -5,7 +5,7 @@
         background: rgba(0,0,0,1);
     }
     .row-map>div.map-info{
-        height: 250px;
+        height: auto;
     }
 }
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
