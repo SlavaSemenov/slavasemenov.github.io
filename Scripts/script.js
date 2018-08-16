@@ -21,6 +21,11 @@ $(function () {
     $(window).on('resize', function (e) {
         width = $(this).width();
         console.log(width);
+        if (!is_touch_device()) {
+            $('.product').addClass('no-touch');
+        } else {
+            $('.product').removeClass('no-touch');
+        }
     })
     var call = $('#call');
     var call_dropdown = $('#call_dropdown');
@@ -36,21 +41,41 @@ $(function () {
                 call_dropdown.css('display', 'none');
             }, 300);
         }
-    )
+    );
 
-    setTimeout(function(){
+    $(window).on('load', function () {
+        if (!is_touch_device()) {
+            $('.product').addClass('no-touch');
+            $('.goods').addClass('goods-no-touch');
+        } else {
+            $('.product').removeClass('no-touch');
+            $('.goods').removeClass('goods-no-touch');
+        }
+    });
+
+    setTimeout(function () {
         $('.product').on("touchend", function (e) {
-            var link = $(this);
-            if (link.hasClass('active')) {
-                link.removeClass('active');
-             } 
-            else {
-               link.addClass('active');
-               $('.product').not(this).removeClass('active');
-               e.preventDefault();
-               return false; 
-              }
-            })
+            if (e.cancelable) {
+                var link = $(this);
+                if (link.hasClass('active')) {
+                    link.removeClass('active');
+                    link.parent().removeClass('active');
+                }
+                else {
+                    link.addClass('active');
+                    link.parent('.col-xs-12.col-md-4').addClass('active');
+                    $('.product').not(this).removeClass('active');
+                    var parentColumns = $('.col-xs-12.col-md-4').not($(this).parent()).toArray();
+                    parentColumns.forEach(item => {
+                        if ($(item).hasClass('active')) {
+                            $(item).removeClass('active');
+                        }
+                    })
+                    e.preventDefault();
+                    return false;
+                }
+            }
+        })
     }, 1000);
 });
 ymaps.ready(init);
@@ -132,4 +157,13 @@ $('a.page-scroll').bind('click', function (event) {
         event.preventDefault();
     }
 });
+
+function is_touch_device() {
+    try {
+        document.createEvent("TouchEvent");
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
 

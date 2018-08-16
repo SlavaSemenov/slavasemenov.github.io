@@ -107,10 +107,10 @@ html, body {
 
 header{
     height: calc(100% + 20px);
-    background-position: center;
+    background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../Content/Images/Backgrounds/main-background_1600.jpg);
+    background-image: url(../Content/Images/Backgrounds/test1.jpg);
 }
 
 header .container{
@@ -124,6 +124,39 @@ header h1{
     color: #ffffff;
     font-weight: 400;
     margin-top: 10px;
+}
+
+header h1 .header-mark{
+    font-family: 'Caveat', cursive;
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+header h2{
+    font-size: 1rem;
+}
+
+header h3{
+    font-size: 1rem;
+}
+
+header h4{
+    font-size: 1.1rem;
+    margin: 5px 0!important;
+}
+
+header h2,
+header h3,
+header h4{
+    color: #ffffff;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+header a:hover h4,
+header a:focus h4{
+    color: #000000;
 }
 
 header h1 small{
@@ -160,6 +193,14 @@ p{
     background: transparent;
     border: 1px solid #ffffff;
     padding: 5px 30px;
+}
+
+header .go-button{
+    margin-right: 40px;
+}
+
+header .go-second{
+    margin-top: 10px;
 }
 
 .go-button:hover{
@@ -274,9 +315,34 @@ section h1{
     width: 100%;
 }
 
+.goods>div{
+    padding: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .goods-no-touch>div:hover,
+    .goods>div.active{
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.1);
+    }
+    
+    .goods-no-touch>div:hover>.product,
+    .goods>div.active>.product {
+        transform-origin: center;
+        transform: scale(1.05);
+    }
+}
+
+
+
 .product{
     height: 380px;
-    margin-top: 29px;
+    margin-bottom: 29px;
     padding: 0;
 }
 
@@ -284,6 +350,7 @@ section h1{
     height: 100%;
     position: relative;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background: white;
     padding: 10px;
 }
 .product-boards .product-price{
@@ -329,7 +396,7 @@ section h1{
 }
 
 @media (min-width: 768px){
-    .product:hover .product-price{
+    .product.no-touch:hover .product-price{
         color: white;
     }
 }
@@ -366,7 +433,7 @@ section h1{
 }
 
 @media (min-width: 768px){
-    .product:hover .product-info{
+    .product.no-touch:hover .product-info{
         opacity: 1;
     }
 }
@@ -704,7 +771,7 @@ footer{
     -moz-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 }
 
 #side-bar.collapsed{
@@ -731,12 +798,12 @@ footer{
     position: relative;
     padding: 10px;
     background: white;
-    border-width: 2px;
+    /* border-width: 2px;
     border-style: solid;
     border-top-color: #ffffff;
     border-left-color: #ffffff;
     border-right-width: 0px;
-    border-bottom-color: #eeeeee;
+    border-bottom-color: #eeeeee; */
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -o-transition: 0.5s;
@@ -745,7 +812,9 @@ footer{
 
 
 .social-item:hover{
-    background: #eeeeee;
+    /* background: #eeeeee; */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1060;
 }
 
 .social-item:nth-child(1)>a{
@@ -753,33 +822,35 @@ footer{
 }
 
 .number-list{
+    padding: 0;
     z-index: 1020;
     list-style: none;
     position: absolute;
-    right: calc(100% + 10px);
+    right: calc(100% + 5px);
     top: 0;
     opacity: 1;
-    width: 250px;
+    width: 200px;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .number-list li{
     background: white;
-    border-width: 3px;
+    /* border-width: 3px;
     border-style: solid;
     border-top-color: #ffffff;
     border-left-color: #ffffff;
     border-right-width: 0px;
-    border-bottom-color: #eeeeee;
+    border-bottom-color: #eeeeee; */
 }
 
 .number-list a{
     color: black;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 35px;
     padding: 0 20px;
 }
 
@@ -831,5 +902,10 @@ footer{
 
 .desktop{
     display: none;
+}
+
+.category-header{
+    text-transform: uppercase;
+    margin-left: 0px;
 }
 
