@@ -344,6 +344,10 @@ section h1{
     height: 380px;
     margin-bottom: 29px;
     padding: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .product-boards{
@@ -388,6 +392,10 @@ section h1{
     opacity: 1;
     margin: 0 15px;
     font-size: 22px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .product.active .product-price{
