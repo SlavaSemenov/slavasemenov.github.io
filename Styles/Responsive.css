@@ -223,6 +223,10 @@
     .desktop{
         display: block;
     }
+
+    .sklad{
+        width: 120px;
+    }
 }
 
 @media (min-width: 1090px) {
