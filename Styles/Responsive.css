@@ -1,12 +1,12 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-    .row-map>div{
+    /* .row-map>div{
         position: relative;
         height: 300px;
         background: rgba(0,0,0,1);
     }
     .row-map>div.map-info{
         height: auto;
-    }
+    } */
 }
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
@@ -237,7 +237,7 @@
 
 @media (min-width: 1200px) {
     header{
-        background-position: left;
+        background-position: right top;
     }
 
     .container{
@@ -270,5 +270,16 @@
 @media (min-width: 435px){
     header .go-second{
         margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px){
+    .row-map>div{
+        position: relative;
+        height: 300px;
+        background: rgba(0,0,0,1);
+    }
+    .row-map>div.map-info{
+        height: auto;
     }
 }

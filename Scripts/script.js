@@ -20,7 +20,7 @@ $(function () {
     });
     $(window).on('resize', function (e) {
         width = $(this).width();
-        console.log(width);
+        // console.log(width);
         if (!is_touch_device()) {
             $('.product').addClass('no-touch');
         } else {
