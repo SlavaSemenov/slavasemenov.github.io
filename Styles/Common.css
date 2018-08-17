@@ -107,7 +107,7 @@ html, body {
 
 header{
     height: calc(100% + 20px);
-    background-position: right;
+    background-position: right top;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../Content/Images/Backgrounds/test1.jpg);
