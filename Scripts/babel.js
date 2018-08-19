@@ -1,4 +1,4 @@
-const CATALOG_TEXT = "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris."
+const CATALOG_TEXT = "В наличии более 1000 комплектов разных видов и характеристик: проводные, блютуз, магнитные, капсульные, боксы, рации и т.д. Если вы не можете определиться с выбором, звоните по указанным номерам, наша круглосуточная поддержка проконсультирует и поможет подобрать подходящий комплект."
 
 const MAGNET_EARPHONES = [
     {
@@ -167,7 +167,7 @@ var Price = React.createClass({
                         </div>
                         <div className="row">
                             <div className="col-rest">
-                                <p><small>Аренда <strong>{this.props.rent}</strong> руб/сутки</small></p>
+                                <p><small>Аренда <strong>{this.props.rent}</strong> руб</small></p>
                             </div>
                         </div>
                     </div>
@@ -218,6 +218,12 @@ var Item = React.createClass({
 });
 
 var GoodsList = React.createClass({
+    componentDidMount: function () {
+        var $this = $(ReactDOM.findDOMNode(this));
+        $('.product-information').on('load', function () {
+            jQuery('.product-information').hyphenate();
+        })
+    },
     render: function () {
         return (
             <div className="">

@@ -51,6 +51,11 @@ $(function () {
             $('.product').removeClass('no-touch');
             $('.goods').removeClass('goods-no-touch');
         }
+        setTimeout(function(){
+            // $('.product-information').on('load', function () {
+                jQuery('.product-information').hyphenate();
+            // });
+        }, 500);
     });
 
     setTimeout(function () {
